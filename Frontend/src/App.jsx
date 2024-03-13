@@ -1,12 +1,14 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+// import React from 'react'
+import {  Routes, Route } from 'react-router-dom';
+import LandingPage from "./pages/LandingPage"
+import ProductDetailPage from "./pages/ProductDetailPage"
 
 function App() {
   return (
-    <div>
-      <Navbar/>
-
-    </div>
+      <Routes>
+        <Route path="/" element={<LandingPage/>} />
+        <Route path="/ProductDetailPage/:id" element={<ProductDetailPage/>} /> 
+      </Routes>
   )
 }
 
