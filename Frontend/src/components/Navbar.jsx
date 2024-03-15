@@ -1,4 +1,7 @@
 // import React from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
   return (
@@ -15,9 +18,13 @@ function Navbar() {
             <a href="/deals" className="text-xl p-4">Deals</a>
             <input className="pl-4 border border-gray rounded-lg" type="text" placeholder="Search Product" />
           </div>
-          <div className="pr-8">
+          <div className="pr-8 flex">
             <a href="/login" className="p-4">Login</a>
-            <a href="/signup" className="p-4">Signup</a>
+            <Link to ="/CartPage">
+              <button className="m-4" >
+              <FaShoppingCart size={25}/>
+              </button>
+            </Link>
           </div>
 
         </div>
